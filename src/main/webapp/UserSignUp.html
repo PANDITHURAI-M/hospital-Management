@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 60%;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      background-color: #3498db;
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-top: 15px;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #2980b9;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+      background-color: #ffffff;
+      padding:15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #3498db;
+    }
+
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      form {
+        width: 100%;
+        max-width: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+
+<h1>Sign Up</h1>
+
+<form action="USERSIGNUP" method="post"> 
+  <label for="email">Email</label>
+  <input id="email" name="email" type="email" required>
+
+  <label for="password">Password</label>
+  <input id="password" name="password" type="password" required>
+
+  <button type="submit">Submit</button>
+</form>
+
+<nav>
+  <a href="Home.html">Home</a>
+ 
+  <a href="UserSignUp.html">Sign up</a>
+</nav>
+</body>
+</html>
+ 	

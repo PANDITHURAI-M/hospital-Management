@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Landing Page</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #e8f5e9; /* light green */
+      color: #2e7d32; /* dark green text */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      background-color: #66bb6a; /* medium green */
+      padding: 12px 24px;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: white;
+      color: #388e3c;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: #2e7d32;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+      margin: 0 20px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="Home.html">Home</a>
+  <a href="Login.html">Login</a>
+  <a href="UserSignUp.html">Sign up</a>
+</nav>
+
+<h1>Welcome to our Hospital Management Site</h1>
+
+</body>
+</html>
