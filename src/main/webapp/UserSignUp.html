@@ -1,135 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Sign Up</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f9;
-      color: #333;
+      font-family: Arial, sans-serif;
+      background-color: #f1f5f9;
       margin: 0;
       padding: 0;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
       align-items: center;
       justify-content: center;
-      height: 60%;
+      color: #333;
     }
 
     nav {
+      background-color: #0d9488;
+      padding: 12px 24px;
       display: flex;
-      gap: 20px;
-      background-color: #3498db;
-      padding: 10px 20px;
-      border-radius: 30px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      margin-top: 15px;
-      margin-bottom: 30px;
+      gap: 16px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-weight: 600;
+      z-index: 100;
     }
 
     nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
-      font-size: 1rem;
-      padding: 8px 16px;
-      border-radius: 20px;
-      transition: background 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: #2980b9;
+      padding: 8px 18px;
+      background-color: #14b8a6;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
+    nav a:hover {
+      background-color: #0f766e;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
     h1 {
-      color: #2c3e50;
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      color: #0d9488;
+      font-size: 2.8rem;
+      margin: 0 0 30px 0;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
     form {
       background-color: #ffffff;
-      padding:15px;
+      padding: 32px 36px;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      width: 300px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      width: 320px;
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 20px;
     }
 
     label {
-      font-size: 1rem;
-      color: #555;
-      margin-bottom: 5px;
+      font-weight: 600;
+      color: #0d9488;
+      font-size: 1.1rem;
     }
 
     input {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
+      padding: 12px 14px;
       font-size: 1rem;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
       outline: none;
       transition: border-color 0.3s ease;
     }
 
     input:focus {
-      border-color: #3498db;
+      border-color: #0d9488;
+      box-shadow: 0 0 6px #0d9488aa;
     }
 
     button {
-      background-color: #3498db;
+      background-color: #0d9488;
       color: white;
-      padding: 12px;
+      padding: 14px;
+      font-size: 1.1rem;
+      font-weight: 700;
       border: none;
-      border-radius: 8px;
-      font-size: 1rem;
+      border-radius: 10px;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(13,148,136,0.4);
     }
 
     button:hover {
-      background-color: #2980b9;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      background-color: #0a6d65;
+      box-shadow: 0 6px 14px rgba(10,109,101,0.6);
     }
 
-    /* Responsive Design */
     @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
+      form {
+        width: 90%;
+        padding: 24px 20px;
       }
 
-      form {
-        width: 100%;
-        max-width: 280px;
+      nav {
+        position: static;
+        margin: 20px 0 0 0;
+        justify-content: center;
+        border-radius: 12px;
       }
     }
   </style>
 </head>
 <body>
 
+  <h1>Sign Up</h1>
 
+  <form action="USERSIGNUP" method="post"> 
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required />
 
-<h1>Sign Up</h1>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" required />
 
-<form action="USERSIGNUP" method="post"> 
-  <label for="email">Email</label>
-  <input id="email" name="email" type="email" required>
+    <button type="submit">Submit</button>
+  </form>
 
-  <label for="password">Password</label>
-  <input id="password" name="password" type="password" required>
+  <nav>
+    <a href="Home.html">Home</a>
+    <a href="UserSignUp.html">Sign up</a>
+  </nav>
 
-  <button type="submit">Submit</button>
-</form>
-
-<nav>
-  <a href="Home.html">Home</a>
- 
-  <a href="UserSignUp.html">Sign up</a>
-</nav>
 </body>
 </html>
- 	
