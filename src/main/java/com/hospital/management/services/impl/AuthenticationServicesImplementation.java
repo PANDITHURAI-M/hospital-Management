@@ -62,8 +62,6 @@ public class AuthenticationServicesImplementation implements AuthenticationServi
 			e.printStackTrace();
 		}
 		
-		
-		
 	}
 
 	@Override
@@ -104,13 +102,10 @@ public class AuthenticationServicesImplementation implements AuthenticationServi
 				if(password.equals(dbUserPassWord)) {
 					System.out.println("Password matched");
 					try {
-						
 						HttpSession session = request.getSession();
-						session.setAttribute("UserName", rs.getString("email")); // session current executing object 
-					
+						session.setAttribute("UserName", rs.getString("email")); // session current executing object 					
 						response.sendRedirect("dashboard.html");
 					} catch (IOException e) {
-
 						e.printStackTrace();
 					}
 		        }
@@ -123,13 +118,10 @@ public class AuthenticationServicesImplementation implements AuthenticationServi
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}
-					 
+				}			 
 			          
 			}
 			connection.close();
-		
-			
 			
 		} catch (SQLException e) {
 			
