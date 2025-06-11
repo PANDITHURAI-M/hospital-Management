@@ -63,25 +63,25 @@ public class DoctorProfileServiceImpl implements ProfileService{
 
 	@Override
 	public void profileUpdation(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("Came inside method");
+		
         
 		String query="update  doctor set name=?, age = ?,address=? ,  mobile=? , gender=?,department=? , experience = ?,	availability=? where doctorId = ? ";
 		String doctorId = request.getParameter("doctorId");
 		String doctorName = request.getParameter("doctorName");
-		String doctorAge = request.getParameter("doctorAge");
+		String doctorage = request.getParameter("doctorAge");
 		String doctorAddress = request.getParameter("doctorAddress");
 		String doctorMobile = request.getParameter("doctorMobile");
 		String doctorGender = request.getParameter("doctorGender");
 		String department = request.getParameter("department");
 		String doctorExperience = request.getParameter("doctorExperience");
-		System.out.println(request.getParameter("doctorAvailability"));
+//		System.out.println(request.getParameter("doctorAvailability"));
 		boolean availability =request.getParameter("doctorAvailability")!=null	;
 		try {
 			Connection connection = JdbcConnection.getConnection();
 			    PreparedStatement statement=connection.prepareStatement(query);
 
 			    statement.setString(1, doctorName);
-			    statement.setString(2, doctorAge);
+			    statement.setString(2, doctorage);
 			    statement.setString(3, doctorAddress);
 			    statement.setString(4, doctorMobile);
 			    statement.setString(5, doctorGender);
