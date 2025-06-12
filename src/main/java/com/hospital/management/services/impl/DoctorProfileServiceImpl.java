@@ -22,9 +22,9 @@ public class DoctorProfileServiceImpl implements ProfileService{
 		String insertQuery="insert into doctor(name , age , address , mobile, gender, department, experience,availability) values(?,?,?,?,?,?,?,?)";
 		
 		try {
-			Connection connection = JdbcConnection.getConnection();
+			Connection connect = JdbcConnection.getConnection();
 			
-			PreparedStatement preparedStatement =connection.prepareStatement(insertQuery);
+			PreparedStatement preparedStatement =connect.prepareStatement(insertQuery);
 			
 			preparedStatement.setString(1, request.getParameter("doctorName"));
 			preparedStatement.setInt(2, Integer.valueOf(request.getParameter("doctorAge")));
@@ -50,7 +50,7 @@ public class DoctorProfileServiceImpl implements ProfileService{
 			}else {
 				System.out.println("Something went wrong");
 			}
-			connection.close();
+			connect.close();
 			
 			}catch(Exception e) {
 				e.printStackTrace();
