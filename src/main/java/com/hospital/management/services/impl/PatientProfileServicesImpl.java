@@ -19,7 +19,7 @@ public class PatientProfileServicesImpl implements ProfileService{
 		
 		String driverURL = "com.mysql.cj.jdbc.Driver";
 		String connectionURL="jdbc:mysql://localhost:3306/Hospital";
-		String user="root";
+		String dbUser="root";
 		String dbPassWord="password";
 		String insertQuery="insert into patient(name,age,address,mobile,gender) values(?,?,?,?,?)";
 	
@@ -33,7 +33,7 @@ public class PatientProfileServicesImpl implements ProfileService{
 		
 		try {
 			// Getting the connection via driver
-			Connection connection = DriverManager.getConnection(connectionURL,user,dbPassWord);
+			Connection connection = DriverManager.getConnection(connectionURL,dbUser,dbPassWord);
 			
 			PreparedStatement preparedStatement =connection.prepareStatement(insertQuery);
 			
@@ -53,13 +53,13 @@ public class PatientProfileServicesImpl implements ProfileService{
 					
 					e.printStackTrace();
 				}
-			}else {
+			 }else {
 				System.out.println("Something went wrong");
-			}
+			 }
 			connection.close();
 			
-		} catch (SQLException e) {
-			
+	   	} catch (SQLException e) {
+	    		
 			e.printStackTrace();
 		}
 		
@@ -77,7 +77,7 @@ public class PatientProfileServicesImpl implements ProfileService{
 
 		String driverURL = "com.mysql.cj.jdbc.Driver";
 		String connectionURL="jdbc:mysql://localhost:3306/Hospital";
-		String user="root";
+		String dbUser="root";
 		String dbPassWord="password";
 		String query="Select * from Hospital.doctor where patientId=?";
 	
@@ -91,7 +91,7 @@ public class PatientProfileServicesImpl implements ProfileService{
 		
 		try {
 			// Getting the connection via driver
-			Connection connection = DriverManager.getConnection(connectionURL,user,dbPassWord);
+			Connection connection = DriverManager.getConnection(connectionURL,dbUser,dbPassWord);
 			
 			PreparedStatement preparedStatement =connection.prepareStatement(query);
 			
