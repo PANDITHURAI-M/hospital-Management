@@ -19,7 +19,7 @@ public class AuthenticationServicesImplementation implements AuthenticationServi
 	public void signup(HttpServletRequest request, HttpServletResponse response) {
 		String driverURL = "com.mysql.cj.jdbc.Driver";
 		String connectionURL="jdbc:mysql://localhost:3306/Hospital";
-		String user="root";
+		String dbUser="root";
 		String dbPassWord="password";
 		String insertQuery="insert into Hospital.authentication (email,password) values(?,?)";
 		
@@ -35,7 +35,7 @@ public class AuthenticationServicesImplementation implements AuthenticationServi
 		
 		try {
 			// Getting the connection via driver
-			Connection connection = DriverManager.getConnection(connectionURL,user,dbPassWord);
+			Connection connection = DriverManager.getConnection(connectionURL,dbUser,dbPassWord);
 			
 			PreparedStatement preparedStatement =connection.prepareStatement(insertQuery);
 			
@@ -69,7 +69,7 @@ public class AuthenticationServicesImplementation implements AuthenticationServi
 	
 		String driverURL = "com.mysql.cj.jdbc.Driver";
 		String connectionURL="jdbc:mysql://localhost:3306/Hospital";
-		String user="root";
+		String dbUser="root";
 		String dbPassWord="password";
 		String insertQuery="select * from authentication where email=? and password=?";
 		
@@ -86,7 +86,7 @@ public class AuthenticationServicesImplementation implements AuthenticationServi
 		
 		try {
 			// Getting the connection via driver
-			Connection connection = DriverManager.getConnection(connectionURL,user,dbPassWord);
+			Connection connection = DriverManager.getConnection(connectionURL,dbUser,dbPassWord);
 			
 			PreparedStatement preparedStatement =connection.prepareStatement(insertQuery,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
 			
