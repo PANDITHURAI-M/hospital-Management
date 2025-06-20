@@ -14,9 +14,9 @@ import com.hospital.management.services.impl.AuthenticationServicesImplementatio
 public class LoginController extends HttpServlet{
 
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		AuthenticationServices services = new AuthenticationServicesImplementation();
 		
-		services.login(req, resp);
+		services.login(request, response);
 	}
 }
