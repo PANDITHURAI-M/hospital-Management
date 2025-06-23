@@ -11,7 +11,7 @@ public class AppointmentServicesImpl implements AppointmentServices {
 
     String driverURL = "com.mysql.cj.jdbc.Driver";
     String connectionURL = "jdbc:mysql://localhost:3306/Hospital";
-    String user = "root";
+    String dbuser = "root";
     String dbPassWord = "password";
     String query = "insert into appointment(doctorId,doctorName,patientId,dateAndtime,department,payment,status) values(?,?,?,?,?,?,'Booked')";
     		
@@ -38,7 +38,7 @@ public class AppointmentServicesImpl implements AppointmentServices {
 
   
         // Establishing connection
-         connection = DriverManager.getConnection(connectionURL, user, dbPassWord);
+         connection = DriverManager.getConnection(connectionURL, dbuser, dbPassWord);
         // Preparing statement
          preparedStatement = connection.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
          preparedStatement.setString(1, doctorId);
