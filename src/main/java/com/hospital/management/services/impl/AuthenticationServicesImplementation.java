@@ -69,7 +69,7 @@ public class AuthenticationServicesImplementation implements AuthenticationServi
 	
 		String driverURL = "com.mysql.cj.jdbc.Driver";
 		String connectionURL="jdbc:mysql://localhost:3306/Hospital";
-		String dbUser="root";
+		String user="root";
 		String dbPassWord="password";
 		String insertQuery="select * from authentication where email=? and password=?";
 		
@@ -86,7 +86,7 @@ public class AuthenticationServicesImplementation implements AuthenticationServi
 		
 		try {
 			// Getting the connection via driver
-			Connection connection = DriverManager.getConnection(connectionURL,dbUser,dbPassWord);
+			Connection connection = DriverManager.getConnection(connectionURL,user,dbPassWord);
 			
 			PreparedStatement preparedStatement =connection.prepareStatement(insertQuery,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
 			
