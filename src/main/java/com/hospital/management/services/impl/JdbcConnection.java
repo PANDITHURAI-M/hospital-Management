@@ -11,7 +11,7 @@ public class JdbcConnection {
 
     String driverURL = "com.mysql.cj.jdbc.Driver";
     String connectionURL = "jdbc:mysql://localhost:3306/Hospital";
-    String user = "root";
+    String dbUser = "root";
     String dbPassWord = "password";
     
     try {
@@ -22,7 +22,7 @@ public class JdbcConnection {
 	}
     
     try {
-		connection=DriverManager.getConnection(connectionURL, user, dbPassWord);
+		connection=DriverManager.getConnection(connectionURL, dbUser, dbPassWord);
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
