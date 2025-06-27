@@ -7,6 +7,7 @@ import java.sql.SQLException;
 public class JdbcConnection {
       
 	public static Connection connection=null;
+	
 	public static Connection  getConnection() {
 
     String driverURL = "com.mysql.cj.jdbc.Driver";
@@ -30,4 +31,7 @@ public class JdbcConnection {
       
 	return connection;
 	}
+	 
+	
+	
 }
