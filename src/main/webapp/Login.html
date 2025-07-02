@@ -4,9 +4,23 @@
   <meta charset="UTF-8">
   <title>Login</title>
   <style>
+  
+    #parent {
+   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+           }
+   #child {
+   
+  background-color: white;
+  padding: 20px;
+          }
+   
     body {
       font-family: 'Arial', sans-serif;
-      background-color: #e8f5e9; /* light green background */
+      background-color: rgb(255, 255, 255); /* light green background */
       color: #2e7d32; /* dark green text */
       margin: 0;
       padding: 0;
@@ -18,7 +32,7 @@
     }
 
     nav {
-      display: flex;
+      display: inline-block;
       gap: 10px;
       background-color: #66bb6a; /* medium green */
       padding: 12px 12px;
@@ -26,6 +40,7 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       margin-top:5px;
       margin-bottom: 5px;
+      margin-left:40px
     }
 
     nav a {
@@ -112,7 +127,8 @@
   </style>
 </head>
 <body>
-
+<div id="parent">
+<div id="child">
 <h1>Login</h1>
 
 <form action="USERLOGIN" method="get">
@@ -129,6 +145,7 @@
   <a href="Home.html">Home</a>
   <a href="UserSignUp.html">Sign up</a>
 </nav>
-
+</div>
+</div>
 </body>
 </html>
