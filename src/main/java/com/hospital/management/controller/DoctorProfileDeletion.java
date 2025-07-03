@@ -14,8 +14,8 @@ import com.hospital.management.services.impl.DoctorProfileServiceImpl;
 public class DoctorProfileDeletion extends HttpServlet {
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ProfileService service = new DoctorProfileServiceImpl();
-		service.profileDeletion(req, resp);
+		service.profileDeletion(request, response);
 	}
 }
