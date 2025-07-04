@@ -118,11 +118,11 @@ public class DoctorProfileServiceImpl implements ProfileService{
 	@Override
 	public void profileDeletion(HttpServletRequest request, HttpServletResponse response) {
 		String query ="delete from doctor where doctorId =?";
-		String id = request.getParameter("doctorId");
+		String doctorId = request.getParameter("doctorId");
 		try {
 			Connection connection = JdbcConnection.getConnection();
 		    PreparedStatement statement=connection.prepareStatement(query);
-		    statement.setString(1,id );
+		    statement.setString(1,doctorId );
 		    int noOfRowsAffect = statement.executeUpdate();
 		    
 		    if(noOfRowsAffect>=1) {
