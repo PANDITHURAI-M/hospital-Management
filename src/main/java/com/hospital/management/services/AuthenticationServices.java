@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 
 public interface AuthenticationServices  {
    
-	public void signup(HttpServletRequest request,HttpServletResponse response);
+	public void signup(HttpServletRequest req,HttpServletResponse res);
 	
-	public void login(HttpServletRequest request,HttpServletResponse response);
+	public void login(HttpServletRequest req,HttpServletResponse res);
 	
 }
