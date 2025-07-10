@@ -20,7 +20,7 @@ public class DoctorAvailabilityServiceImpl implements DoctorAvailabilityService 
 		String connectionURL="jdbc:mysql://localhost:3306/Hospital";
 		String dbUser="root";
 		String dbPassWord="password";
-        String query ="update  Hospital.doctor set availability=true where doctorId = ?";
+        String updateQuery ="update  Hospital.doctor set availability=true where doctorId = ?";
 		
 		
 	
@@ -36,7 +36,7 @@ public class DoctorAvailabilityServiceImpl implements DoctorAvailabilityService 
 			// Getting the connection via driver
 			Connection connection = DriverManager.getConnection(connectionURL,dbUser,dbPassWord);
 			
-			PreparedStatement preparedStatement =connection.prepareStatement(query);
+			PreparedStatement preparedStatement =connection.prepareStatement(updateQuery);
 			
 			preparedStatement.setInt(1,Integer.parseInt( request.getParameter("id")));
 			
