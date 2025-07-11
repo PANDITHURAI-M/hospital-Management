@@ -36,12 +36,12 @@ public class DoctorAvailabilityServiceImpl implements DoctorAvailabilityService 
 			// Getting the connection via driver
 			Connection connection = DriverManager.getConnection(connectionURL,dbUser,dbPassWord);
 			
-			PreparedStatement preparedStatement =connection.prepareStatement(updateQuery);
+			PreparedStatement statement =connection.prepareStatement(updateQuery);
 			
-			preparedStatement.setInt(1,Integer.parseInt( request.getParameter("id")));
+			statement.setInt(1,Integer.parseInt( request.getParameter("id")));
 			
 			    
-			int noOfRowsAffected = preparedStatement.executeUpdate();
+			int noOfRowsAffected = statement.executeUpdate();
 			
 			if(noOfRowsAffected>=1) {
 				try {
