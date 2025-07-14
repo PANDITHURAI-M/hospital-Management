@@ -94,16 +94,16 @@ public class AuthenticationServicesImplementation implements AuthenticationServi
 			preparedStatement.setString(2, password);
 			
 
-			ResultSet rs = preparedStatement.executeQuery();
-			if(rs.next()) {
+			ResultSet resultSet = preparedStatement.executeQuery();
+			if(resultSet.next()) {
 				
-				 String dbUserPassWord = rs.getString("password");
+				 String dbUserPassWord = resultSet.getString("password");
 				System.out.println(dbUserPassWord);
 				if(password.equals(dbUserPassWord)) {
 					System.out.println("Password matched");
 					try {
 						HttpSession session = request.getSession();
-						session.setAttribute("UserName", rs.getString("email")); // session current executing object 					
+						session.setAttribute("UserName", resultSet.getString("email")); // session current executing object 					
 						response.sendRedirect("dashboard.html");
 					} catch (IOException e) {
 						e.printStackTrace();
