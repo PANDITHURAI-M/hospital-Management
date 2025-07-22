@@ -15,9 +15,9 @@ public class DoctorAvailableController extends HttpServlet {
 
 	
 	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		DoctorAvailabilityService availableService = new DoctorAvailabilityServiceImpl();
-	    availableService.makeAvailable(request, response);
+	    availableService.makeAvailable(req, res);
 		
 	}
 }
