@@ -16,10 +16,10 @@ import com.hospital.management.services.impl.AuthenticationServicesImplementatio
 public class SignUpController extends HttpServlet{
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp)  {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)  {
 		
 		AuthenticationServices services = new AuthenticationServicesImplementation();
 		
-		services.signup(req, resp);
+		services.signup(request, response);
 	}
 }
