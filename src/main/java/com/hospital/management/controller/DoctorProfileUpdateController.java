@@ -16,10 +16,10 @@ public class DoctorProfileUpdateController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 @Override
-protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+protected void doPost(HttpServletRequest request, HttpServletResponse response) {
 	
 	DoctorProfileServiceImpl service = new DoctorProfileServiceImpl();
-	service.profileUpdation(req, resp);
+	service.profileUpdation(request, response);
 	
 	
 }
