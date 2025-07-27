@@ -18,8 +18,8 @@ public class DoctorProfileUpdateController extends HttpServlet {
 @Override
 protected void doPost(HttpServletRequest request, HttpServletResponse response) {
 	
-	DoctorProfileServiceImpl service = new DoctorProfileServiceImpl();
-	service.profileUpdation(request, response);
+	DoctorProfileServiceImpl s = new DoctorProfileServiceImpl();
+	s.profileUpdation(request, response);
 	
 	
 }
