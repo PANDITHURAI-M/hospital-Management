@@ -19,8 +19,8 @@ public class DoctorUnAvailableController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		DoctorAvailabilityService availableService = new DoctorAvailabilityServiceImpl();
-		availableService.makeUnAvailable(req, resp);
+		availableService.makeUnAvailable(request, response);
 	}
 }
